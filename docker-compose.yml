@@ -1,7 +1,29 @@
-version: '3'
-services:
-  
-  stock-market-portfolio:
+version: '3.9'
+services:   
+  backapp:
+    container_name: backapp
     build: ./stock-market-portfolio
+    image: catujav/backapp
     ports:
       - "8080:5000"
+    depends_on:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+  stock-market-frontend:
+    container_name: frontapp
+    build: ./stock-market-frontend
+    image: catujav/frontapp
+    ports:
+      - "3001:80"
+    depends_on:
+      - backapp
+    links:
+      - backapp
+volumes:
+  mongo-data:

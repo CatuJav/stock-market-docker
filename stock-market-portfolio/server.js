@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect("mongodb://localhost:270171/");
+mongoose.connect("mongodb://mongo:27017/");
 
 const stockSchema = new mongoose.Schema({
 	company: String,
