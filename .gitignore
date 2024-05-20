@@ -1,0 +1,47 @@
+# Dependencias
+/node_modules
+/.vscode
+# Archivos generados por el entorno de desarrollo
+/.env
+/.env.local
+/.env.*.local
+/npm-debug.log*
+/yarn-debug.log*
+/yarn-error.log*
+/.pnp
+.pnp.js
+
+# Carpeta de compilación
+/build
+
+# Archivos de respaldo
+*.bak
+*.swp
+*~
+
+# Archivos de configuración del editor
+.vscode/
+.idea/
+
+# Archivos de registro
+logs/
+*.log
+
+# Archivos de caché
+*.cache
+.cache/
+
+# Archivos de compilación
+*.out
+*.o
+*.obj
+
+# Archivos de respaldo de Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Archivos de respaldo de WebStorm
+.idea/
+*.iml
+*.iws
+*.ipr
