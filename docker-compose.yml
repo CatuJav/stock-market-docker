@@ -1,0 +1,7 @@
+version: '3'
+services:
+  
+  stock-market-portfolio:
+    build: ./stock-market-portfolio
+    ports:
+      - "8080:5000"
